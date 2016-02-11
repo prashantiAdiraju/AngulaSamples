@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+	<head lang="en">
+	  <meta charset="utf-8">
+	  <title>AngularJS Project</title>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<!-- navigation starts here -->
+		<nav id="header-nav" class="navbar navbar-default" style="margin:0 auto;position:relative;margin-bottom: 0 !important">
+		  <div class="container-fluid">
+		    <div class="navbar-header" style="background: url(images/global.png) no-repeat;background-size: auto auto;background-position: 0 -264px;">
+		      <a class="navbar-brand" href="#" style="padding: 15px 142px;"></a>
+		    </div>
+		  </div>
+		</nav>
+		<nav id="global-nav" ng-controller="navController" class="navbar navbar-default" >
+		  <div class="container-fluid"  style="color:white;background:#ff6000;">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#"></a>
+		    </div>
+		      <ul class="nav navbar-nav" >
+		        <li class="prod-dropdown" ng-repeat="menu in menus">
+		            <a style="color:white;" ng-href="#/{{menu.description['url']}}" ng-class="{'dropdown-toggle': menu.menus}" class="dropdown-toggle" data-toggle="dropdown">
+		                {{menu.description['name'] | uppercase}} <span ng-if="menu.childs" class="caret"></span>
+		            </a>
+		            <ul ng-if="menu.childs" class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+		                <li class="dropdown-submenu" ng-repeat="submenu in menu.childs">
+		                    <a tabindex="-1" ng-href="#/{{submenu.description['url']}}">{{submenu.description['name']}}</a>
+		                    <ul class="dropdown-menu" ng-if="submenu.childs">
+		                        <li class="dropdown-submenu" ng-repeat="subofsub in submenu.childs">
+		                            <a ng-href="#/{{subofsub.description['url']}}">{{subofsub.description['name']}}</a>
+		                        </li>
+		                    </ul>
+		                </li>
+		            </ul>
+		          </li>      
+		      </ul>
+		    </div>
+		</nav>
+		<!-- navigation ends here -->
+		<!-- page mutlile views -->
+		<div>
+			<ng-view></ng-view>
+		</div>
+		<!-- page mutlile views ends-->
+		<!-- JS -->
+		    <!-- load angular, nganimate, and ui-router -->
+		    <script type="text/javascript" src="lib/angular.min.js"></script>
+		    <script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
+
+			<script src="js/app.js"></script>
+  			<script src="js/navController.js"></script>
+  			<script src="js/navServices.js"></script>
+		<!-- javascript files -->
+	</body>
+</html>
