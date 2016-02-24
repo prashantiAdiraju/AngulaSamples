@@ -1,0 +1,64 @@
+<div ng-controller="EmployeesController">  
+ <h3>{{appTitle}}</h3>
+  <p>{{appHeadline}}</p>
+  <form name="frm">    
+   <table cellpadding="4" cellspacing="4" border="1" style="border-collapse: collapse; border:solid 1px gray;width:50%">    
+       <tr>    
+           <td width="20%">Emp No   :      
+           </td>    
+           <td>    
+               <input type="text" name="empno" ng-model="empno" required><br />    
+           </td>    
+       </tr>    
+       <tr>    
+           <td>Emp Name   :    
+  
+           </td>    
+           <td>    
+               <input type="text" name="empname" ng-model="empname" required>    
+           </td>    
+       </tr>    
+       <tr>    
+           <td>Emp Salary   :   
+           </td>    
+           <td>    
+               <input type="text" name="empsalary" ng-model="empsalary">    
+           </td>    
+       </tr>    
+       <tr>    
+           <td colspan="2" align="right" style="background:gray">    
+  
+               <button ng-click="addEmployee()" ng-disabled="frm.$invalid" style="background:#ff6000;color:white;padding:5px;border-radius:8px;">Add Employee</button>    
+           </td>    
+  
+       </tr>    
+   </table> 
+   <table cellpadding="4" cellspacing="4" border="1" style="margin-top:20px;border-collapse: collapse; border: solid 1px gray">    
+    <tr>    
+        <td></td>  
+        <td><b>Emp No</b></td>    
+        <td><b>Emp Name</b></td>    
+        <td><b>Emp Salary</b></td>    
+        <td><b>Action</b></td>    
+    </tr>    
+    <tr ng-repeat="employee in employees">  
+        <td><input type="checkbox" value="" /></td>    
+        <td>{{employee.empno}}
+        </td>
+        <td><span ng-hide="employee.showEmployee" ng-bind="employee.empname"></span>
+        <input ng-show="employee.showEmployee" ng-model="employee.empname" />
+        </td>
+        <td><span ng-hide="employee.showEmployee" ng-bind="employee.empsalary"></span>
+        <input ng-show="employee.showEmployee" ng-model="employee.empsalary" />
+        </td>    
+        <td>           
+            <button ng-click="deleteEmployee(employee)" style="background:#ff6000;color:white;padding:5px;border-radius:8px;">Delete</button>
+            <button ng-hide="employee.showEmployee" ng-click="modify(employee)" style="background:#ff6000;color:white;padding:5px;border-radius:8px;">Modify</button>
+            <button ng-show="employee.showEmployee" ng-click="update(employee)" style="background:#ff6000;color:white;padding:5px;border-radius:8px;">Update</button>
+        </td>    
+    </tr>     
+  
+</table>    
+<div style="padding:20px 0;">Total Employees : {{count}}</div>    
+</div>       
+</form>

@@ -1,0 +1,163 @@
+ [
+    {
+        "id": 100,        
+        "description": {
+             "id": 0,
+             "name": "Home",
+            "url": "home"
+        }
+    },    
+    {
+        "id": 101,
+        "description": {
+            "id": 0,
+            "name": "Products",
+            "url": "online-banking"
+        },
+        //"productCount": 0,
+        "childs": [
+            {
+                "id": 203,
+                "description": {
+                    "id": 0,
+                    "name": "Checking",
+                    "url": "underground"
+                },
+            //    "productCount": 0,
+                "childs": []
+            },
+            {
+                "id": 206,
+                "description": {
+                    "id": 0,
+                    "name": "Savings",
+                    "url": "underground"
+                },
+            //    "productCount": 0,
+                "childs": []
+            },            
+            {
+                "id": 207,
+                "description": {
+                    "id": 0,
+                    "name": "Money Market",
+                    "url": "money-market"
+                },
+                "productCount": 0,
+                "childs": []
+            },            
+            {
+                "id": 208,
+                "description": {
+                    "id": 0,
+                    "name": "CDs",
+                    "url": "underground"
+                },
+            //    "productCount": 0,
+                "childs": []
+            },            
+            {
+                "id": 209,
+                "description": {
+                    "id": 0,
+                    "name": "IRAs",
+                    "url": "underground"
+                },
+          //      "productCount": 0,
+                "childs": []
+            },            
+            {
+                "id": 210,
+                "description": {
+                    "id": 0,
+                    "name": "Compare Products",
+                    "url": "underground"
+                },
+            //    "productCount": 0,
+                "childs": []
+            }
+        ]
+    },
+    {
+        "id": 102,
+        "description": {
+            "id": 0,
+            "name": "Why Us",
+            "url": "whyus"
+        },
+        "productCount": 0
+        /*"childs": [
+            {
+                "id": 203,
+                "description": {
+                    "id": 0,
+                    "name": "abt1",
+                    "url": "underground"
+                },
+                "productCount": 0,
+                "childs": []
+            },
+            {
+                "id": 206,
+                "description": {
+                    "id": 0,
+                    "name": "abt7771",
+                    "url": "underground"
+                },
+                "productCount": 0,
+                "childs": []
+            }
+        ]*/
+    },
+    {
+        "id": 103,
+        "description": {
+            "id": 0,
+            "name": "Help Center",
+            "url": "helpcenter"
+        },
+        "productCount": 0,
+        "childs": [
+{
+                "id": 203,
+                "description": {
+                    "id": 0,
+                    "name": "Contact Us",
+                    "url": "underground"
+                },
+                "productCount": 0,
+                "childs": []
+            },
+            {
+                "id": 207,
+                "description": {
+                    "id": 0,
+                    "name": "FAQs",
+                    "url": "underground"
+                },
+                "productCount": 0,
+                "childs": []
+            },
+            {
+                "id": 207,
+                "description": {
+                    "id": 0,
+                    "name": "Forms & Documents",
+                    "url": "underground"
+                },
+                "productCount": 0,
+                "childs": []
+            },
+            {
+                "id": 208,
+                "description": {
+                    "id": 0,
+                    "name": "Security Center",
+                    "url": "underground"
+                },
+                "productCount": 0,
+                "childs": []
+            }
+        ]
+    }
+]
