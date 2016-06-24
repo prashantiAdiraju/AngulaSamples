@@ -24,30 +24,38 @@
   <div id="status" style="display: none;"><img src="images/loader.gif" id="preloader_image" width="36" height="36" alt="loading image"></div>
 </div>
 <!--pre loader end--> 
-<!-- color picker start -->
+<!-- Quick quote start -->
 <div id="style-switcher" class="hs_color_set">
   <div>
     <h3>Quick Quote</h3>
    
-            <label for="e-style">Name</label>
-          <input type="text" name="Name" style="width:180px" required="" pattern="[A-Za-z]+\s[A-Za-z-']+" title="firstname lastname">
+          <label for="e-style">Name</label>
+          <input type="text" class="form-control" name="Name" required="" pattern="[A-Za-z]+\s[A-Za-z-']+" title="firstname lastname">
 
             <label for="e-style">Phone</label>
-            <input type="text" name="Phone" style="width:180px" required="" pattern="([0-9]{10})" title="Please Enter a Vaild 10 digit Phoneno">
+            <input class="form-control" type="text" name="Phone" required="" pattern="([0-9]{10})" title="Please Enter a Vaild 10 digit Phoneno">
 
             <label for="e-style">e-Mail</label>
-            <input type="text" name="Email" style="width:180px" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please enter a vaild Email">
+            <input class="form-control" type="text" name="Email" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please enter a vaild Email">
 
             <label for="e-style">Comments</label>
-            <textarea name="Comments" cols="3" rows="3" style="width:180px"></textarea>
-            <label for="header-style">Service</label>           
-            <button type="submit"> Submit</button>
+            <textarea class="form-control" name="Comments" cols="3" rows="2"></textarea>
+            <label for="header-style">Service</label>        
+            <select class="form-control" name="Service" id="header-style" required="" title="Please select one option">
+                <option value="Transcription" selected="selected">Select</option>
+                <option value="Transcription">Transcription</option>
+                <option value="Coding/Billing">Coding/Billing</option>
+                <option value="MDCare EMR/PMS">MDCare EMR/PMS</option>
+                <option value="D R Transcription">D R Transcription</option>
+            </select>  
+            <p></p>
+           <button id="btnsubmit" class="btn btn-success pull-right" type="submit">Submit</button>
    
     <p> </p>
   </div>
   <div class="bottom"> <a href="" class="settings"><i class="fa fa-gear fa-pencil"></i></a> </div>
 </div>
-<!-- color picker end --> 
+<!-- Quick quote end --> 
 <!--header start-->
 
 <header id="hs_header" class="hs_header_fixed fixed">
