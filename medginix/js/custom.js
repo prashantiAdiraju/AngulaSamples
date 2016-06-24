@@ -194,13 +194,13 @@ $('#slider_book_apo').click(function(){
 	$("#style-switcher .bottom a.settings").click(function(e){
 			e.preventDefault();
 			var div = $("#style-switcher");
-			if (div.css("left") === "-200px") {
+			if (div.css("left") === "-201px") {
 				$("#style-switcher").animate({
 					left: "0px"
 				}); 
 			} else {
 				$("#style-switcher").animate({
-					left: "-200px"
+					left: "-201px"
 				});
 			}
 		});
