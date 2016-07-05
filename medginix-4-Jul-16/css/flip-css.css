@@ -5516,23 +5516,6 @@ section.dark .nav-tabs.nav-button-tabs>li>a {
 	   -moz-border-radius: 0 !important;
 			border-radius: 0 !important;
 }
-	.nav-tabs.nav-stacked>li.active>a {
-		background-color:#fafafa;
-	}
-div.tab-content.tab-stacked {
-	padding:17px;
-	background-color:#fafafa;
-}
-section.dark div.tab-content.tab-stacked {
-	background-color:#444;
-}
-section.dark .nav-tabs.nav-stacked>li>a {
-	background-color:#666;
-}
-section.dark .nav-tabs.nav-stacked>li.active>a {
-	background-color:#444;
-	margin:0;
-}
 
 @media only screen and (max-width: 480px) {
 	.nav-tabs>li {
