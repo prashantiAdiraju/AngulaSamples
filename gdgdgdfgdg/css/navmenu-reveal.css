@@ -1,0 +1,169 @@
+html, body {
+  height: 100%;
+background-color: #333;
+  -webkit-font-smoothing: antialiased;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+.navbar-toggle {
+  float: left;
+  margin-left: 15px;
+}
+
+.navmenu {
+  z-index: 1;
+}
+
+.canvas {
+  position: relative;
+  left: 0;
+  z-index: 2;
+  min-height: 100%;
+  padding: 50px 0 0 0;
+  background: #fff;
+}
+.navbar-default .navbar-toggle {
+  border-color: #333;
+}
+.navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus{
+    background-color:#333
+}
+.navmenu-default .navmenu-nav>li>a, .navbar-default .navbar-offcanvas .navmenu-nav>li>a{
+    color: #c5c5c5;
+    font-family: Cambria,Georgia,Serif;
+    text-transform: none
+}
+.nav>li>a {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 50px;
+  line-height: 3.125rem;
+  padding-left:40px;
+}
+.navmenu-default .navmenu-nav>li>a:hover, .navbar-default .navbar-offcanvas .navmenu-nav>li>a:hover{
+    color: #fff;
+}
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 32px;
+  height: 4px;
+  border-radius: 0px;
+  border:none;  
+}
+.navbar-toggle .icon-bar+.icon-bar {
+  margin-top: 4px;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+.menu-container {
+  width: 100%;
+  position: relative;
+  top: 0;
+  padding: 26px 30px;
+}
+.deginix-logo {
+  position: absolute;
+  float: none;
+  right: 30px;
+  top: 23px;
+  z-index: 1;
+}
+/* content */
+
+.content-container {
+width: 100%; 
+position: relative; 
+ z-index: 0;
+transition: -webkit-transform .5s ease 0s; 
+transition: transform .5s ease 0s;
+  background-color: #fff;
+  -webkit-backface-visibility: hidden;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  top: 10%;
+
+  }
+ .content-box {
+  background-color: #3c3c3c;
+  padding: 5% 5% 9% 5%;
+  margin: 0 auto;
+  color:#fff;
+  font-size: 1.325em;
+  line-height: 1.66667em;
+  font-family: Cambria,Georgia,Serif;
+  color: #c5c5c5;
+  text-transform: none;
+  text-align: center
+ }
+ .content-box h2{
+  color:#fff;
+  padding:20px 0;
+ }
+.content-box:before {
+  left: 100%;
+  border-color: transparent transparent transparent #3c3c3c;
+}
+ .content-box-right {
+  background-color: #fff;
+  padding: 5% 5% 9% 5%;
+  margin: 0 auto;
+  color:#fff;
+  font-size: 1.325em;
+  line-height: 1.66667em;
+  font-family: Cambria,Georgia,Serif;
+  color: #c5c5c5;
+  text-transform: none;
+  }
+@media (min-width: 1025px){
+  .menu-container {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #333;
+  padding: 30px;
+}
+.deginix-logo {
+  bottom: 40px;
+  top: auto;
+  left: 15px;
+  right: auto;
+}
+}
+@media (min-width: 0) {
+  .navbar-toggle {
+    display: block; /* force showing the toggle */
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    padding: 0;
+  }
+  .navbar {
+    right: auto;
+    background: none;
+    border: none;
+  
+    min-height: 100%;
+    background: #333;
+}
+  .canvas {
+    padding: 0;
+  }
+}
+.navbar-offcanvas {
+ position: none;
+  z-index: 1050;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  border-radius: 0;
+}
