@@ -1,0 +1,408 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsive Off-canvas Sidebar Navigation Demo</title>
+ <!-- Bootstrap core CSS -->
+<link href="css/font-awesome.css" rel="stylesheet">
+
+<style>
+
+
+body, html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+body{
+  overflow-x: hidden; 
+  overflow-y: auto;
+}
+section{
+  height: 100%;
+}
+.content {
+  text-align: center;
+  margin: 0px 0 0 130px;
+  color: #fff;
+  padding: 150px auto;
+  background-image: url(images/home1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  /*width: 100%*/
+ 
+
+}
+.home-text-center{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 50%;
+  left: 55%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+    text-shadow: 0 2px 2px rgba(0,0,0,.4);
+}
+h1 { 
+	text-align:center; 
+	margin:0px auto; 
+	color:#fff; 
+	padding: 0px;
+	font-weight: normal;
+	font-size: 4em;
+    line-height: 48px;
+    line-height: 3rem;
+}
+
+main {
+  z-index: 2;
+  position: relative;
+  height: 100%;
+  background-color: #000;
+  color: #c5c5c5;
+  font-family: Cambria,Georgia,Serif;
+  -webkit-transition: transform .7s ease-in-out;
+  -moz-transition: transform .7s ease-in-out;
+  -ms-transition: transform .7s ease-in-out;
+  -o-transition: transform .7s ease-in-out;
+  transition: transform .7s ease-in-out;
+}
+.logo {
+  position: absolute;
+  bottom: 0;
+  margin: 20px;
+  font-size:1.6em;
+  color:#fff;
+  font-family: Verdana;
+  font-weight: bold;
+  z-index: 4
+}
+.logo .logo-part2 {	
+	padding: 10px;
+	
+}
+.sidebar {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  left:0;
+  /*background-color: #EF8354;*/
+  background-color: #333;
+}
+
+.bar {
+  display: block;
+  height: 5px;
+  width: 50px;
+  background-color: #c5c5c5; 
+  margin: 10px auto;
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  width: auto;
+  margin: 0 auto;
+  padding: 40px 0;
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+.nav-right {
+  height:100%;
+  background:#333;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+    padding: 0px 40px 0px 40px;
+}
+
+.nav-right.visible-xs { z-index: 3; }
+
+.hidden-xs { display: none; }
+
+.middle { margin: 0 auto; }
+
+.bar {
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+.nav-right.visible-xs .active .bar {
+  background-color: #FFF;
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+.button.active .top {
+  -webkit-transform: translateY(15px) rotateZ(45deg);
+  -moz-transform: translateY(15px) rotateZ(45deg);
+  -ms-transform: translateY(15px) rotateZ(45deg);
+  -o-transform: translateY(15px) rotateZ(45deg);
+  transform: translateY(15px) rotateZ(45deg);
+}
+
+.button.active .bottom {
+  -webkit-transform: translateY(-15px) rotateZ(-45deg);
+  -moz-transform: translateY(-15px) rotateZ(-45deg);
+  -ms-transform: translateY(-15px) rotateZ(-45deg);
+  -o-transform: translateY(-15px) rotateZ(-45deg);
+  transform: translateY(-15px) rotateZ(-45deg);
+}
+
+.button.active .middle { width: 0; }
+
+.move-to-left {
+  -webkit-transform: translateX(49%);
+  -moz-transform: translateX(49%);
+  -ms-transform: translateX(49%);
+  -o-transform: translateX(49%);
+  transform: translateX(49%);
+}
+
+nav { padding-top: 1px; }
+
+.sidebar-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.sidebar-item {
+  margin: 30px 0;
+  opacity: 0;
+  -webkit-transform: translateY(-20px);
+  -moz-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  -o-transform: translateY(-20px);
+  transform: translateY(-20px);
+}
+
+.sidebar-item:first-child {
+  -webkit-transition: all .7s .2s ease-in-out;
+  -moz-transition: all .7s .2s ease-in-out;
+  -ms-transition: all .7s .2s ease-in-out;
+  -o-transition: all .7s .2s ease-in-out;
+  transition: all .7s .2s ease-in-out;
+}
+
+.sidebar-item:nth-child(2) {
+  -webkit-transition: all .7s .4s ease-in-out;
+  -moz-transition: all .7s .4s ease-in-out;
+  -ms-transition: all .7s .4s ease-in-out;
+  -o-transition: all .7s .4s ease-in-out;
+  transition: all .7s .4s ease-in-out;
+}
+
+.sidebar-item:nth-child(3) {
+  -webkit-transition: all .7s .6s ease-in-out;
+  -moz-transition: all .7s .6s ease-in-out;
+  -ms-transition: all .7s .6s ease-in-out;
+  -o-transition: all .7s .6s ease-in-out;
+  transition: all .7s .6s ease-in-out;
+}
+
+.sidebar-item:last-child {
+  -webkit-transition: all .7s .8s ease-in-out;
+  -moz-transition: all .7s .8s ease-in-out;
+  -ms-transition: all .7s .8s ease-in-out;
+  -o-transition: all .7s .8s ease-in-out;
+  transition: all .7s .6s ease-in-out;
+}
+
+.sidebar-item.active {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+.sidebar-anchor {
+  color: #c5c5c5;
+  text-decoration: none;
+  font-size: 1.7em;;
+  font-family: Cambria,Georgia,Serif;
+  text-transform: none;
+  position: relative;
+  padding-left: 40px;  
+}
+.sidebar-anchor:hover{
+	color: #fff;
+}
+.sidebar-anchor:before {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 40px;  
+  background-color: #fff;
+  -webkit-transition: all .7s ease-in-out;
+  -moz-transition: all .7s ease-in-out;
+  -ms-transition: all .7s ease-in-out;
+  -o-transition: all .7s ease-in-out;
+  transition: all .7s ease-in-out;  
+}
+.push-left{
+  overflow-x: hidden;
+}
+ @media (max-width: 480px) {
+  .sidebar { 
+  width: 100%;  
+}
+.move-to-left {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.nav-right {
+  height: 80px;
+  background: #333;
+  position: absolute;
+  /* left: 0px; */
+  /* top: 0px; */
+  padding: 20px;
+  width: 100%;
+}
+.logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 20px;
+  font-size: 1.6em;
+  color: #fff;
+  font-family: Verdana;
+  font-weight: bold;
+  z-index: 4;
+  /* width: 100%; */
+}
+}
+.sidebar-anchor:hover:before { width: 100%;col }
+
+ @media (min-width: 480px) {
+
+.nav-list { display: block; }
+}
+ @media (min-width: 768px) {
+
+.nav-right { position: absolute; }
+
+.hidden-xs { display: block; }
+
+.visible-xs { display: none; }
+}
+</style>
+</head>
+
+<body>
+<div class="nav-right visible-xs">
+  <div class="button" id="btn">
+    <div class="bar top"></div>
+    <div class="bar middle"></div>
+    <div class="bar bottom"></div>
+  </div>
+</div>
+ <div class="logo visible-xs">Med<br/><span class="logo-part2">Genix</span></div>
+<!-- nav-right -->
+<main>
+  <nav>
+    <div class="nav-right hidden-xs">
+      <div class="button" id="btn">
+        <div class="bar top"></div>
+        <div class="bar middle"></div>
+        <div class="bar bottom"></div>
+      </div>
+    </div>
+      <div class="logo hidden-xs">Med<br/><span class="logo-part2">Genix</span></div>
+    <!-- nav-right --> 
+  </nav>
+
+  <section>
+    <div class="content">    
+    <div class="col-md-12 col-sm-12">
+    	<div class="home-text-center">
+       		<h1>MedGinix</h1>
+       		<p>A Contract Management Company </p>
+       </div>
+    </div> 
+    </div>
+  </section>
+</main>
+
+<div class="sidebar">
+  <ul class="sidebar-list">
+    <li class="sidebar-item"><a href="#" class="sidebar-anchor">Home</a></li>
+    <li class="sidebar-item"><a href="#" class="sidebar-anchor">Who we are</a></li>
+    <li class="sidebar-item"><a href="#" class="sidebar-anchor">What we offer</a></li>
+    <li class="sidebar-item"><a href="#" class="sidebar-anchor">Our Partners</a></li>
+    <li class="sidebar-item"><a href="#" class="sidebar-anchor">Schedule a Meet</a></li>
+    <li class="sidebar-item"><a href="#" class="sidebar-anchor">Contact Us</a></li>
+  </ul>
+</div>
+<!--script src="http://code.jquery.com/jquery-1.12.3.min.js"></script-->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function() {
+
+  function toggleSidebar() {
+    $(".button").toggleClass("active");
+    $("main").toggleClass("move-to-left");
+    $(".sidebar-item").toggleClass("active");
+   // $("body").toggleClass("push-left");
+  }
+
+  $(".button").on("click tap", function() {
+    toggleSidebar();
+  });
+
+  $(document).keyup(function(e) {
+    if (e.keyCode === 27) {
+      toggleSidebar();
+    }
+  });
+
+});
+</script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+ /* (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();*/
+
+</script>
+</body>
+</html>
