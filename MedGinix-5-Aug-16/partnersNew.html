@@ -1,0 +1,418 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>Medginix - A Contract Management Company</title>
+
+    <!-- Bootstrap core CSS -->
+<link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jasny-bootstrap.min.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+
+    <link href="css/navmenu-reveal.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<link href="css/whoweare.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style>
+//* entire container, keeps perspective */
+	/* simple */
+		.flip-container {
+			-webkit-perspective: 1000;
+			-moz-perspective: 1000;
+			-ms-perspective: 1000;
+			perspective: 1000;
+
+			-ms-transform: perspective(1000px);
+			-moz-transform: perspective(1000px);
+    			-moz-transform-style: preserve-3d; 
+    			-ms-transform-style: preserve-3d; 
+
+			border: 1px solid #ccc;
+
+		}
+
+			/*
+			.flip-container:hover .flipper, .flip-container.hover .flipper, #flip-toggle.flip .flipper {
+				-webkit-transform: rotateY(180deg);
+				-moz-transform: rotateY(180deg);
+				-ms-transform: rotateY(180deg);
+				transform: rotateY(180deg);
+				filter: FlipH;
+    			-ms-filter: "FlipH";
+			}
+			*/
+
+
+/* START: Accommodating for IE */
+.flip-container:hover .back, .flip-container.hover .back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.flip-container:hover .front, .flip-container.hover .front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+		
+		/* END: Accommodating for IE */
+
+		.flip-container, .front, .back {
+			width: 100%;
+			height:350px;
+
+		}
+
+		.flipper {
+			-webkit-transition: 0.6s;
+			-webkit-transform-style: preserve-3d;
+			-ms-transition: 0.6s;
+
+			-moz-transition: 0.6s;
+			-moz-transform: perspective(1000px);
+			-moz-transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;
+
+			transition: 0.6s;
+			transform-style: preserve-3d;
+
+			position: relative;
+		}
+
+		.front, .back {
+			-webkit-backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+			-ms-backface-visibility: hidden;
+			backface-visibility: hidden;
+
+		    -webkit-transition: 0.6s;
+		    -webkit-transform-style: preserve-3d;
+		    -webkit-transform: rotateY(0deg);
+
+		    -moz-transition: 0.6s;
+		    -moz-transform-style: preserve-3d;
+		    -moz-transform: rotateY(0deg);
+
+		    -o-transition: 0.6s;
+		    -o-transform-style: preserve-3d;
+		    -o-transform: rotateY(0deg);
+
+		    -ms-transition: 0.6s;
+		    -ms-transform-style: preserve-3d;
+		    -ms-transform: rotateY(0deg);
+
+		    transition: 0.6s;
+		    transform-style: preserve-3d;
+		    transform: rotateY(0deg);
+
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.front {
+			-webkit-transform: rotateY(0deg);
+			-ms-transform: rotateY(0deg);
+			/*background: lightgreen;*/
+			z-index: 99999;
+		}
+
+		.back {
+			background: lightblue;
+			-webkit-transform: rotateY(-180deg);
+		    -moz-transform: rotateY(-180deg);
+		    -o-transform: rotateY(-180deg);
+		    -ms-transform: rotateY(-180deg);
+		    transform: rotateY(-180deg);
+border-radius:20px;
+		}
+
+		.front .name {
+			font-size: 2em;
+			display: inline-block;
+			background: rgba(33, 33, 33, 0.9);
+			color: #f8f8f8;
+			font-family: Courier;
+			padding: 5px 10px;
+			border-radius: 5px;
+			bottom: 60px;
+			left: 25%;
+			position: absolute;
+			text-shadow: 0.1em 0.1em 0.05em #333;
+			display: none;
+			z-index:2;
+			-webkit-transform: rotate(-0deg);
+			-moz-transform: rotate(-0deg);
+			-ms-transform: rotate(-0deg);
+			transform: rotate(-0deg);
+		}
+
+		.back-logo1{
+		   background:url("images/logo.png") no-repeat;margin-top:20px;margin-left:30%;width:200px;height:200px;text-align:center;
+		}
+.back-logo2{
+		   background:url("images/logo.png") no-repeat;margin-top:20px;margin-left:30%;width:200px;height:200px;text-align:center
+		}
+.back-logo3{
+		   background:url("images/logo.png") no-repeat;margin-top:20px;margin-left:30%;width:200px;height:200px;text-align:center
+		}
+		.back-title {
+			font-weight: bold;
+			color: #00304a;
+			position: absolute;
+			top: 180px;
+			left: 0;
+			right: 0;
+			text-align: center;
+			text-shadow: 0.1em 0.1em 0.05em #acd7e5;
+			font-family: Courier;
+			font-size: 22px;
+		}
+
+		.back p {
+			position: absolute;
+			bottom: 40px;
+			left: 0;
+			right: 0;
+			text-align: center;
+			padding: 0 20px;
+			font-size: 18px;
+		}
+
+		
+</style>
+  </head>
+
+   <body style="overflow-x:hidden;overflow-y:auto !important;">
+<!-- sticky social contact-->
+<div id="style-switcher" class="hs_color_set">
+  <div>
+    <!--h3>Contact</h3-->
+        <ul class="social-footer">
+
+            <li>   <a class="tooltip-side-nav" title="" data-original-title="Facebook" data-placement="left" href="https://www.facebook.com/Medginix-1629199350699254/"><img src="images/facebook.png" /></a>
+            </li>
+            <li>
+              <a class="tooltip-side-nav" title="" data-original-title="Twitter" data-placement="left" href="https://twitter.com/medginixsupport"><img src="images/twitter.png" /></a>
+            </li> 
+	    <li>
+              <a class="tooltip-side-nav" title="" data-original-title="Twitter" data-placement="left" href="mailto:Support@medginix.com"><img src="images/mail-128.png" /></a>
+            </li>  
+          </ul>   
+  </div>  <div class="bottom"> <a href="" class="settings"><i class="fa fa-edit"></i></a> </div>
+</div>
+<!-- sticky social contact ends-->
+<!-- menu starts -->
+    <div class="sidebar navmenu navmenu-default navmenu-fixed-left">
+    <div href="/" class="deginix-logo">
+      <p>MedGinix</p>
+      <span>A Contract Management Company</span>
+    </div>
+    <ul class="sidebar-list">
+      <li class="sidebar-item active"><a href="index.html" class="sidebar-anchor">Home</a></li>
+      <li class="sidebar-item active"><a href="index.html#whoweare" class="sidebar-anchor">Who we are</a></li>
+      <li class="sidebar-item active"><a href="index.html#whatweoffer-ps" class="sidebar-anchor">What we offer</a></li>
+      <li class="sidebar-item active"><a href="#" class="sidebar-anchor active">Our Partners</a></li>
+      <li class="sidebar-item active"><a href="schedule.html" class="sidebar-anchor">Schedule a Meet</a></li>
+      <li class="sidebar-item active"><a href="contactus.html" class="sidebar-anchor">Contact Us</a></li>
+    </ul>
+  </div>
+    <div class="canvas">
+      <div class="navbar navbar-default navbar-fixed-top" data-toggle="offcanvas" data-recalc="false" data-target=".navmenu" data-canvas=".canvas">            
+        <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-recalc="false" data-target=".navmenu" data-canvas=".canvas">        
+          <div class="button" id="btn">
+            <div class="bar top"></div>
+            <div class="bar middle"></div>
+            <div class="bar bottom"></div>
+          </div>
+        </button>
+      </div>
+<div id="partners" class="container">
+<!-- partners starts -->
+   <section id="partnersSec" class="partners">
+<h2 style="padding:0px 20px 20px 15px;">Our Partners</h2>
+	<div class="col-md-4">
+           <div class="blue">
+		<div class="flip-container" ontouchstart="this.classList.toggle('hover');" style="border-radius:20px">
+		   <div class="flipper">
+			<div class="front" background: url(images/logo.jpg);">
+			<!-- front content -->
+			<h2 style="text-align:center;padding-top:20px;color:#fff">HFOP</h2>
+<img src="images/pic1.jpg" style="width:360px;padding:20px;">
+			<span class="name">HPOF</span>
+<P style="text-align:center;padding-top:20px;color:#fff">HPOF-American Association of Medical Billing</P>
+		</div>
+		<div class="back">
+			<!-- back content -->
+			<div class="back-logo1"></div>
+			<div class="back-title">@AAMBA</div>
+				<p>AAMBA-American Association of Medical Billing</p>
+			</div>
+		</div>
+		   </div>
+                </div>
+          </div>
+<div class="col-md-4">
+           <div class="yellow">
+		<div class="flip-container" ontouchstart="this.classList.toggle('hover');" style="border-radius:20px">
+		   <div class="flipper">
+			<div class="front" style="background: url("images\logo.png") no-repeat;">
+			<!-- front content -->
+			<h2 style="text-align:center;padding-top:20px;color:#fff">AAMBA</h2>
+<img src="images/pic1.jpg" style="width:360px;padding:20px;">
+			<span class="name">AAMBA</span>
+<P style="text-align:center;padding-top:20px;color:#fff">AAMBA-American Association of Medical Billing</P>
+		</div>
+		<div class="back">
+			<!-- back content -->
+			<div class="back-logo2" style="background: url('images/logo.png') no-repeat;"></div>
+			<div class="back-title">@AAMBA</div>
+				<p>AAMBA-American Association of Medical Billing</p>
+			</div>
+		</div>
+		   </div>
+                </div>
+          </div>
+ <div class="col-md-4 col-sm-12 wow fadeInUp animated" data-wow-duration="300ms" data-wow-delay="0ms">
+ <div class="green">
+   <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+		<div class="front" style="background: url(dwflip.jpg) 0 0 no-repeat;">
+			<!-- front content -->
+			<h2 style="text-align:center;padding-top:20px;color:#fff">AAPC</h2>
+<img src="images/pic1.jpg" style="width:360px;padding:20px;">
+			<span class="name">AAPC</span>
+<P style="text-align:center;padding-top:20px;color:#fff">AAMBA-American Association of Medical Billing</P>
+		</div>
+		<div class="back">
+			<!-- back content -->
+			<div class="back-logo3"></div>
+			<div class="back-title">@AAPC</div>
+				<p>AAPC Holdings-American Associate of Payer Coding</p>
+			</div>
+		</div>
+	</div> 
+   </div>
+ </div>
+
+  </section>
+<!-- partners ends -->
+<div style="clear:both"></div>
+
+<!-- footer starts -->
+<section id="footer">
+  <footer id="conatctus" class="page-footer wow fadeInDown animated" data-wow-duration="300ms" data-wow-delay="0ms">
+    <div class="grid-full">
+      <div class="content-box">
+      
+        <div class="col-sm-8 col-sx-12 footnotes">
+          <p style="text-align:left">&copy; MedgGinix 2016.<br><a href="tel:01132021400">772 468 7020</a>
+          <br><strong>For Enquires:</strong> sales@medginix.com 
+          <br><strong>For Support:</strong> Support@medginix.com 
+          </p>          
+          
+        </div>
+        <div class="col-sm-4 col-sx-12 footnotes right">  
+       
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+<!-- FOOTER ends -->
+<!-- Return to Top -->
+<a href="javascript:" id="return-to-top"><i class="icon-chevron-up" style="display:inline-block;font-size:35px;margin-top:-7px;">^</i></a>
+<!-- Test the scroll -->
+   </div><!-- /.container -->
+   </div>
+   <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jasny-bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+<script>
+$(document).ready(function() {
+
+  function toggleSidebar() {
+    $(".button").toggleClass("active");
+    $("canvas").toggleClass("move-to-left");
+    $(".sidebar-item").toggleClass("active");
+   // $("body").toggleClass("push-left");
+  }
+
+  $(".button").on("click tap", function() {
+    toggleSidebar();
+  });
+
+  $(document).keyup(function(e) {
+    if (e.keyCode === 27) {
+      toggleSidebar();
+    }
+  });
+
+/* scroll top */
+//Check to see if the window is top if not then display button
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 100) {
+      $('.back-to-top').fadeIn();
+    } else {
+      $('.back-to-top').fadeOut();
+    }
+  });
+  
+  //Click event to scroll to top
+  $('.back-to-top').click(function(){
+    $('html, body').animate({scrollTop : 0},800);
+    return false;
+  });
+  // home button scroll down
+  $('.home-btn').click(function(){
+
+  var WH = $(window).height();  
+ // alert(WH);
+  var SH = 1323;//$('body').prop("scrollHeight");
+ // alert(SH);
+  $('html, body').stop().animate({scrollTop: SH-WH}, 1000);
+}); 
+ 
+});
+
+// ===== Scroll to Top ==== 
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
+</script>
+
+  </body>
+</html>
