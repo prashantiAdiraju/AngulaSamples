@@ -473,40 +473,29 @@ z-index:999 !important;
 #whatweoffer, #whatweoffer-ps{
    background-color: #3c3c3c;height: 100%;overflow: visible;
 } 
-#partners{
-    background:#eee;
+#partnersSec{
+    background:#fff;
 
     }
-#partners h2 {
+#partnersSec.partners {
+  padding:40px;
+}
+#partnersSec.partners .blue, #partnersSec.partners .green, #partnersSec.partners .yellow {border-radius:20px;}
+
+#partnersSec.partners .blue{
+background:#008b8b;
+}
+#partnersSec.partners .green{
+background:lightgreen;
+}
+#partnersSec.partners .yellow{
+background:#ffa500;
+}
+#partnersSec.partners h2 {
      color: #15Cae0;
      font-family: Cambria,Georgia,Serif;
 }
-#partners .content-box-partners {
-  padding: 2% 0;
-  margin: 0 auto;
-  font-size: 20px;
-  line-height: 1.6em;
-  font-family: Cambria,Georgia,Serif;
-  color: #c5c5c5;
-  text-transform: none;
-  min-height: 160px;
-  height: 160px;
-  -webkit-transition: all .7s .2s ease-in-out;
-  -moz-transition: all .7s .2s ease-in-out;
-  -ms-transition: all .7s .2s ease-in-out;
-  -o-transition: all .7s .2s ease-in-out;
-  transition: all .7s .2s ease-in-out;
-
-}
-#partners .block__more {
-    font-size: 18px;
-    margin-top: 0px;
-    display:block;
-    text-decoration:underline;
-    padding-right: 20px;
-}
-
- .content-box-right .whatweoffer__image, .whoweare__image {
+.content-box-right .whatweoffer__image, .whoweare__image {
     position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
