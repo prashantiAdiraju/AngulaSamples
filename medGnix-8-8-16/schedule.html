@@ -16,10 +16,11 @@
     <link href="css/jasny-bootstrap.min.css" rel="stylesheet">
 <link href="css/animate.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-
+<link href="css/monthly.css" rel="stylesheet">
     <link href="css/navmenu-reveal.css" rel="stylesheet">
 <link href="css/styles.css" rel="stylesheet">
 <link href="css/whoweare.css" rel="stylesheet">
+
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -77,9 +78,9 @@
           </div>
         </button>
       </div>
-<div id="services_content" class="container">
+<div id="schedule" class="container">
 <!-- partners starts -->
-   <section id="contractManagement" class="whoweare-page">
+   <section id="schedule-section" class="schedule-page">
     <div class="col-md-6 wow fadeInUp animated" data-wow-duration="300ms" data-wow-delay="0ms" style="padding:0">
     <div style="margin:40px;width:400px;height:430px;background:#ffb84d;border-radius:20px;">
       <img src="images/whatweoffer-img.jpg" style="padding:40px;width:600px;border-radius:20px;">
@@ -94,6 +95,12 @@
                 <p><input type="email" id="regMail" name="email" data-validation="email" class="form-control input-lg" placeholder="Email">
                 </p>
                <p><input type="text" id="regPhone" name="phone" data-validation="required" class="form-control input-lg" placeholder="Phone"></p>
+               <p>
+                  <div style="display:inline-block; width:150px;">
+      <input type="text" class="calander" id="mytarget" value="Select Date">
+      <div class="monthly" id="mycalendar2"></div>
+    </div>
+               </p>
                 <p><button type="submit" class="btn btn-empty btn-block btn-lg">Ok</button></p>
 </div>
 <div class="col-md-1 col-sm-12 wow fadeInUp animated" data-wow-duration="300ms" data-wow-delay="0ms">
@@ -138,6 +145,7 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/jasny-bootstrap.min.js"></script>
 	<script src="js/main.js"></script>
+    <script src="js/monthly.js"></script>
 <script>
 
 </script>
