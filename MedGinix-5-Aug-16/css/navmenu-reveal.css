@@ -480,7 +480,7 @@ z-index:999 !important;
 #partnersSec.partners {
   padding:40px;
 }
-#partnersSec.partners .blue, #partnersSec.partners .green, #partnersSec.partners .yellow {border-radius:20px;}
+#partnersSec.partners .blue, #partnersSec.partners .green, #partnersSec.partners .yellow, #partnersSec.partners .red {border-radius:20px;}
 
 #partnersSec.partners .blue{
 background:#008b8b;
@@ -490,6 +490,9 @@ background:lightgreen;
 }
 #partnersSec.partners .yellow{
 background:#ffa500;
+}
+#partnersSec.partners .red{
+background:#15Cae0;
 }
 #partnersSec.partners h2 {
      color: #15Cae0;
