@@ -47,7 +47,10 @@ $(document).ready(function() {
 });
 //bookmark
 $(document).ready(function () { 
-
+ var WH = $(window).height();  
+ // alert(WH);
+  var SH = 1323;//$('body').prop("scrollHeight");
+ // alert(SH);
  location.hash && $(location.hash + '.collapse').collapse('show');
  $('html, body').stop().animate({scrollTop:SH-WH}, 1000);
   return false;
