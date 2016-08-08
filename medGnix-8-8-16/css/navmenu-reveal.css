@@ -529,14 +529,14 @@ background:#15Cae0;
   transition: all .7s .2s ease-in-out;
 
   }
-#whatweoffer-ps .content-box-left h2 { 
+#whatweoffer-ps .content-box-left h2,#schedule h2  { 
   color: #15Cae0;  
   padding: 4% 5% 3.6% 5%;
 }
 #whatweoffer-ps ul{
   list-style-type:none;
 }
-#schedule { background-color: #AFEEEE  ; }
+#schedule { background-color: #fff ; font-family: Cambria,Georgia,Serif;}
 #schedule .content-box {
   background-color: transparent;
   padding: 0;
