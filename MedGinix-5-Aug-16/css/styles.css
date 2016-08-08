@@ -29,6 +29,7 @@ section{
     margin-top: -15px;
     font-size: 80px !important;
     font-weight: bold !important;
+    top: 40%;
 }
 @media screen and (min-width: 768px)
 .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next {
@@ -925,7 +926,7 @@ ul.colors li p {
   padding: 6px;
   font-family: sosa;
   line-height: 40px;
-  margin-top: 33px;
+  margin-top: 64px;
   color: #fff;
   border: solid 0px #191919;
 }
