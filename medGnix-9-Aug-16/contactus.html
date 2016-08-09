@@ -29,7 +29,6 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 <style>
-
 </style>
   </head>
 
@@ -84,9 +83,9 @@
 <!-- contacts starts -->
 <section id="whoweare-3">
         <div id="block-3" class="col-md-6 col-sm-12 content-box-left wow fadeInUp animated" data-wow-duration="300ms" data-wow-delay="0ms">
-         <div class="whoweare__image3" style="height:530px;"></div>
+         <div class="whoweare__image3" style="height:595px;"></div>
         </div>           
-      <div class="col-md-6 col-sm-12 content-box content-box-3 second wow fadeInUp animated" data-wow-duration="300ms" data-wow-delay="0ms" style="height:530px;">
+      <div class="col-md-6 col-sm-12 content-box content-box-3 second wow fadeInUp animated" data-wow-duration="300ms" data-wow-delay="0ms" style="height:595px !important;min-height:595px !important;">
            <!--h2>Heading 1</h2-->
            <h2>Contact Us</h2>
                 <br>
@@ -146,24 +145,20 @@
 	<script src="js/main.js"></script>
 <script>
 $(document).ready(function() {
-
   function toggleSidebar() {
     $(".button").toggleClass("active");
     $("canvas").toggleClass("move-to-left");
     $(".sidebar-item").toggleClass("active");
    // $("body").toggleClass("push-left");
   }
-
   $(".button").on("click tap", function() {
     toggleSidebar();
   });
-
   $(document).keyup(function(e) {
     if (e.keyCode === 27) {
       toggleSidebar();
     }
   });
-
 /* scroll top */
 //Check to see if the window is top if not then display button
   $(window).scroll(function(){
@@ -181,7 +176,6 @@ $(document).ready(function() {
   });
   // home button scroll down
   $('.home-btn').click(function(){
-
   var WH = $(window).height();  
  // alert(WH);
   var SH = 1323;//$('body').prop("scrollHeight");
@@ -190,7 +184,6 @@ $(document).ready(function() {
 }); 
  
 });
-
 // ===== Scroll to Top ==== 
 $(window).scroll(function() {
     if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
