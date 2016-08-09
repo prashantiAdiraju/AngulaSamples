@@ -412,13 +412,21 @@ background-image: url('../images/home1.jpg');height: 100%;
     transition: -webkit-transform .3s ease;
     transition: transform .3s ease
 }
-.btn__link a {
+.btn__link a{
+color: #333 !important;
+ border: 1px solid #333;
+}
+.content-box .btn__link a {
+	color: #c5c5c5 !important;
+ border: 1px solid #c5c5c5;
+}
+.btn__link a, .content-box .btn__link a {
     margin-top: 30px;
-    color: #333 !important;
+    
     padding: 8px 25px 10px;
     display: inline-block;
     text-align: center;
-    border: 1px solid #333;
+   
     transition: all .3s ease 0s;
     font-size: 16px;
     font-size: 2rem;
@@ -426,6 +434,11 @@ background-image: url('../images/home1.jpg');height: 100%;
 .btn__link a:hover {    
     color: #fff !important  ; 
 background:#000;   
+}
+
+.content-box .btn__link:hover{
+    color: #333 !important  ; 
+
 }
 @media (min-width: 1025px) {
     .csstransitions .home-btn:focus:after,.csstransitions .home-btn:hover:after {
@@ -509,10 +522,10 @@ background:#000;
 }
 
 #footer .page-footer .content-box {
-       background: #555;
+       background: #ffb84d;
     min-height: 75px;
     height: 75px;
-    color: #fff;
+    color: #333;
     padding: 1% 3%;
 }
 
@@ -539,6 +552,7 @@ background:#000;
 #footer .footnotes p{
       font-size:18px;
       line-height: 1.5em;
+    text-align: center;
     }
 .footnotes .grid-full {
     width: 100%;
@@ -565,8 +579,15 @@ background:#000;
     border-radius: 0px;
 
 }
+.btn:hover, .btn:focus {
+    color: #fff;
+    text-decoration: none;
+    background: #000 !important;
+}
 .btn-lg, .btn-group-lg>.btn{
    border-radius: 0px;
+background:#5c5c5c;
+width:100px;
 }
 #footer .footnotes button{
   width:20%;
@@ -597,7 +618,7 @@ background:#000;
   width: 100%;
 }
 #footer .page-footer .content-box {
-    background: #f5f5f5;
+    background: #ffb84d;
     min-height: auto;
    /* padding: 5% 5% 9% 0%;*/
 }
