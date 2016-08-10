@@ -1,20 +1,20 @@
 /* Overall wrapper */
 #whoweare-3 input[type="text"].calander {
-  padding: 6px;
-  border-radius: 5px;
-  font-size: 16px;
-  outline: none;
-  border: 1px solid #fff;
-  background: rgba(63, 78, 100, 0.27);
-  color: #fff; 
-  box-sizing: border-box;
-  width:160px;
-  
+    padding: 2px 15px;
+    /* border-radius: 5px; */
+    /* font-family: Cambria,Georgia,Serif; */
+   /*  font-size: 18px; */
+    outline: none;
+    border: 1px solid #ccc; 
+    /* background: rgba(63, 78, 100, 0.27); */
+    color: #777;
+    box-sizing: border-box;
+    width: 160px;
 }
 /* Overall wrapper */
 #whoweare-3 .monthly {
-	background: #F3F3F5;
-	color:#545454;
+	background: #333;
+	color:#c3c3c3;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -27,13 +27,13 @@
 #whoweare-3 .monthly-header {
 	position: relative;
 	text-align:center;
-	padding:10px;
-	background: #ffb84d;
+	padding:5px;
+	background: #555;
 	height: 40px;
 	box-sizing: border-box;
 }
 #whoweare-3 .monthly-header-title {
-	font-size:.8em;
+	font-size:1em;
 	text-transform: uppercase;
 }
 /* wrapper for left button to make the clickable area bigger */
@@ -54,8 +54,8 @@
 	position: absolute;
 	top:50%;
 	left:50%;
-	border-left:2px solid #222;
-	border-bottom:2px solid #222;
+	border-left:2px solid #fff;
+	border-bottom:2px solid #fff;
 	width:5px;
 	height:5px;
 	margin:-3px 0 0 -5px;
@@ -81,8 +81,8 @@
 	position: absolute;
 	top:50%;
 	left:50%;
-	border-right:2px solid #222;
-	border-top:2px solid #222;
+	border-right:2px solid #fff;
+	border-top:2px solid #fff;
 	width:5px;
 	height:5px;
 	margin:-3px 0 0 -5px;
@@ -93,10 +93,10 @@
 
 /* Day of the week headings */
 .monthly-day-title-wrap {
-	display:table;
-	width:100%;
-	background: #fff;
-	border-bottom: 1px solid #ffb84d;
+	display: table;
+    width: 100%;
+    background: #000;
+    border-bottom: 1px solid #000;
 }
 .monthly-day-title-wrap div {
 	width: 14.28%!important;
@@ -106,7 +106,7 @@
 	font-weight: bold;
 	text-align:center;
 	text-transform: uppercase;
-	font-size:11px;
+	font-size:13px;
 }
 
 /* Calendar days wrapper */
@@ -129,7 +129,7 @@
 	position: relative;
 	font-weight: bold;
 	color:inherit;
-	background: #fff;
+	background: #888;
 	box-shadow: 0 0 0 1px #EBEBEB;
 	-webkit-transition: .25s;
 	transition:.25s;
@@ -169,8 +169,10 @@
 }
 .monthly-day-pick > .monthly-day-number {
 	line-height: 1em;
-	font-size:11px;
+	font-size:12px;
 	padding-top:35%;
+	text-align: center;
+	padding-left:5px;
 }
 
 .monthly-day-pick > .monthly-indicator-wrap {
@@ -199,32 +201,32 @@
 /* Current day style */
 .monthly-today .monthly-day-number {
 	color: #FFF;
-	background: #EA6565;
-	border-radius: 20px;
-	top: 1px;
-	left: 1px;
-	font-size: 10px;
-	width: 18px;
-	height: 18px;
-	line-height: 18px;
-	text-align: center;
+    background: #EA6565;
+    border-radius: 20px;
+    top: 1px;
+    left: 0px;
+    font-size: 12px;
+    width: 23px;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
 }
 .monthly-day-pick.monthly-today .monthly-day-number {
 	padding:0;
-	margin:22% 22% 0 22%;
+	margin:22% 22% 0 17%;
 }
 
 /* Button to reset to current month */
 .monthly-reset {
 	display: inline-block;
-	width: 9px;
-	height: 9px;
-	border: 2px solid #222;
-	border-radius: 9px;
-	position: relative;
-	opacity: .5;
-	margin-left: 5px;
-	vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    /* border-radius: 9px; */
+    position: relative;
+    opacity: .5;
+    margin-left: 5px;
+    vertical-align: middle;
 }
 .monthly-reset:hover {
 	opacity: 1;
@@ -233,21 +235,21 @@
 /* Makes the little arrow on the reset button */
 .monthly-reset:before {
 	content: '';
-	border: 3px solid transparent;
-	border-left: 3px solid #fff;
-	border-bottom: 3px solid #fff;
-	position: absolute;
-	left: 2px;
-	top: 6px;
+    border: 3px solid transparent;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    position: absolute;
+    left: 4px;
+    top: 6px;
 }
 .monthly-reset:after {
 	content: '';
-	border: 3px solid transparent;
-	border-left: 3px solid #222;
-	border-bottom: 3px solid #222;
-	position: absolute;
-	left: 5px;
-	top: 5px;
+    border: 3px solid transparent;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    position: absolute;
+    left: 8px;
+    top: 2px;
 }
 /* Button to return to month view */
 .monthly-cal {
