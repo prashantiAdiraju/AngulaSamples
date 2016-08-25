@@ -1,0 +1,38 @@
+<html>
+<head>
+<script>
+            $(document).ready(function () {
+                $("#Submit").click(function () {
+                    $.ajax({
+                        type: "GET",
+                        url: "mars.xml",
+                        dataType: "xml",
+                        success: function (xml) {
+                            $(xml).find('student').each(function () {
+                                var Name = $(this).find('name').text();
+                                var Mark = $(this).find('marks').text();
+                                var Sid = $(this).find('id').text();
+                var student_id = "#"+$(this).attr("id");
+ $("#content").append("<li><input type='button' class='dyna_btn' id = '"+$(this).attr("id")+"' value='"+Name+"'/></li>");
+                    var hue = '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+
+                    $(student_id).css('color', hue);
+                    $("#content").append('<li>' + Sid + '<li>');
+                         });
+                        }
+                    });
+                });
+            });
+            $(document).on("click", ".dyna_btn", function() {
+                     alert("button"+$(this).attr("id"));
+                     console.log("button clicked");
+                      });
+         </script>
+         </head>
+        <body>
+        <form id="From1" method="post">
+        <input type="button" value="submit" name="Submit" id="Submit" />
+        <div id="content">
+        </div>
+        </form>
+    </body>
